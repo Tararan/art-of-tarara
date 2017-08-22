@@ -1,0 +1,105 @@
+.main {
+    color: $primary-txt-color;
+    
+    &__content-main-title {
+        @include font-title;
+        text-transform: capitalize;
+        font-size: $font-xl;
+        text-align: center;
+        padding: 200px 0 50px 0;
+        
+        @media (max-width: $screen-sm) {
+            font-size: $font-l;
+            padding: 100px 0 25px 0;
+        } 
+    }
+    
+    &__content-title {
+        @extend .main__content-main-title;
+        font-size: $font-l;
+        padding: 30px;
+        
+        @media (max-width: $screen-sm) {
+            font-size: $font-m;
+            padding: 25px;
+        }
+    }
+    
+    &__content-txt{
+        @include font-txt;
+        width: 75%;
+        margin: 0 auto;
+        padding: 25px 0;
+        font-size: $font-xs;
+        color: $primary-txt-color;
+    }
+    
+    &__txt-strong {
+        font-weight: 700;
+        font-style: oblique;
+    }
+    
+    &__gallery {
+        margin: 0 auto;
+        padding: 30px 0;
+        background-color: darken($color-darken,5%);
+    }
+    
+    &__gallery-title {
+        padding: 40px;
+        display: block;
+        text-align: center;
+        font-size: $font-m;
+        
+        @media (max-width: $screen-sm) {
+            font-size: $font-s;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        border-radius: 10px;
+        @include picture-shadow;
+    }
+    
+//    ABOUT-ME / INDEX.HTML
+    &__content--top-padding {
+        padding-top: 65px;
+        
+        @media (max-width: $screen-sm) {
+            padding-top: 50px;
+        }
+    }
+    
+    &__content-title--bg {
+        background-color: darken($color-darken, 5%);
+        padding: 20px;
+    }
+    
+    &__content-art {
+        background: linear-gradient(rgba(51, 51, 51, 0.75),rgba(51, 51, 51, 0.75)), url("https://img14.deviantart.net/e120/i/2017/230/b/f/coraline_by_artoftarara-dajvyv8.png");
+        @include parallax;
+
+    }
+    
+    &__content-frontend {
+        background: linear-gradient(rgba(51, 51, 51, 0.75),rgba(51, 51, 51, 0.75)), url("https://img09.deviantart.net/a9a9/i/2017/230/4/5/code_by_artoftarara-dbkgl5t.png");
+        @include parallax;
+    }
+    
+    &__content-me {
+        background: linear-gradient(rgba(51, 51, 51, 0.75),rgba(51, 51, 51, 0.75)), url("https://img14.deviantart.net/a79e/i/2017/230/a/8/me_by_artoftarara-dbkgl5m.jpg");
+        @include parallax; 
+    }
+    
+//    WEB DESIGN
+    &__content-subtitle {
+        @extend .main__content-title;
+        font-size: $font-m;
+    }
+    
+    &__marker {
+        @include marker;
+    }
+    
+}

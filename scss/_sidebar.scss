@@ -1,0 +1,40 @@
+.sidebar {
+    padding: 100px 0 100px 0;
+    text-align: center;
+    @include font-txt;
+    
+    @media (max-width: $screen-md) {
+        padding: 0;
+    }
+    
+    &__title {
+        @include font-title;
+        font-size: $font-m;
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    
+    &__img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        @include picture-shadow;
+    }
+    
+    &__img-title {
+        padding-top: 30px;
+        display: block;
+        font-weight: bolder;
+        font-size: $font-xs;
+    }
+    
+    &__img-txt {
+        padding: 20px 0 40px 0;
+        display: block;
+        
+        @media (max-width: $screen-md) {
+            padding: 0 0 60px 0;
+            display: block;
+        }
+    }
+}

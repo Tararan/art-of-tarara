@@ -1,0 +1,35 @@
+body {
+    position: relative;
+    background: url("https://pre01.deviantart.net/491c/th/pre/i/2017/230/a/f/dark_shapes_x_by_artoftarara-dbkgjjg.png");
+    background-repeat: repeat;
+}
+
+.grid {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.grid-item {
+    margin: 5px;
+    max-width: 300px;
+    
+    @media (max-width: $screen-sm) {
+        max-width: 300px;
+    }
+}
+
+
+.width-m {
+    max-width: 450px;
+}
+.width-l {
+    max-width: 600px;
+}
+
+.width-xl {
+    max-width: 900px;
+}
+
+.width-xxl {
+    max-width: 1200px;
+}

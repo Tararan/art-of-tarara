@@ -1,0 +1,74 @@
+.social {
+    
+    @media (min-width: $screen-sm){
+        background-color: darken($color-darken, 5%);
+        opacity: 0.5;
+        padding: 20px;
+        margin-top: 250px;
+        left: -10px;
+        position: fixed;
+        margin-left: 0;
+        display: block;
+        z-index: 5;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+        -webkit-transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+        transition: transform 0.1s ease-in-out,
+                    opacity 0.1s ease-in-out;
+        box-shadow: 0px 0px 30px rgba(0,0,0,.75);
+    }
+    
+    @media(max-width: $screen-sm) {
+        position: absolute;
+        z-index: 5;
+        opacity: 1;
+        top: 800px;
+        padding: 11px 20px;
+    }
+    
+    &--is-sticky {
+        position: fixed;
+        z-index: 5;
+        opacity: 1;
+        top: 0;
+        padding: 11px 20px;
+    }
+    
+    &:hover {
+        opacity: 0.85;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: transform 0.1s ease-in-out
+                    opacity 0.1s ease-in-out;     
+        transition: transform 0.1s ease-in-out
+                    opacity 0.1s ease-in-out;
+    }
+    
+     
+    &__links {
+        margin: 20px 0;
+        width: 25px;
+        display: block;
+        -webkit-transition: transform 0.15s ease-in-out;
+        transition: transform 0.15s ease-in-out;
+        
+        &:hover {
+            -webkit-transform: scale(2) translateX(5px);
+            transform: scale(2) translateX(5px);
+            -webkit-transition: transform 0.1s ease-in-out;
+            transition: transform 0.1s ease-in-out;
+        }
+        
+        @media(max-width: $screen-sm) {
+            display: inline-block;
+            width: 30px;
+            margin: 0 35px 0 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    
+    &__icon {
+        width: 100%;
+    }
+}
